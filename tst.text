@@ -1,0 +1,1 @@
+npx sequelize-cli model:generate --name users_data --attributes name:string,age:integer,email:string
