@@ -1,1 +1,8 @@
+// migration
 npx sequelize-cli model:generate --name users_data --attributes name:string,age:integer,email:string
+
+//seeder
+npx sequelize-cli seed:generate --name user-add
+
+
+npx sequelize-cli model:generate --name reviewModel --attributes rating:integer,description:text

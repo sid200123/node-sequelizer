@@ -7,6 +7,14 @@ const { where } = require("sequelize");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// routers
+const router = require("./routes/productRouter.js");
+app.use("/api/products", router);
+
+//static Images Folder
+
+app.use("/Images", express.static("./Images"));
+
 app.get("/", async (req, resp) => {
   try {
     const data = await db.users_data.findAll();
